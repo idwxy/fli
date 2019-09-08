@@ -46,4 +46,11 @@ public class UserController {
         }
         return new ResultObject(406, "用户名或密码错误", "登陆失败");
     }
+
+    // 搜索功能，过滤敏感词汇
+    @GetMapping("/search")
+    public ResultObject search(@RequestParam String word) {
+        // 若关键字是敏感词，在拦截器 以及被拦截，不可能走到这里
+        return new ResultObject("search word " + "'" + word + "'" + " is valid.");
+    }
 }
