@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.OutputStream;
 
+// 登录过滤器，过滤除登录接口外的所有接口，通过检查session属性---user实现登录功能
 public class LoginFilter implements Filter {
 
     // 存储 FilterConfig 中不需要过滤的 URLs
